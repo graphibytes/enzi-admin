@@ -9,6 +9,8 @@ import Users from "./pages/users";
 import Orders from "./pages/orders";
 import FeaturedProducts from "./pages/FeaturedProducts";
 import PopularProducts from "./pages/PopularProducts";
+import ManageCategories from "./pages/ManageCategories";
+import UserOrders from "./pages/UserOrders";
 
 
 
@@ -49,6 +51,8 @@ function App() {
                     <Route path="/featured-products" element={<FeaturedProducts />} />
                     <Route path="/popular-products" element={<PopularProducts />} />
                     <Route path="*" element={<Navigate to="/dashboard" />} />
+                    <Route path="/manage-categories" element={<ManageCategories />} />
+                    <Route path="/user-orders/:userId" element={<UserOrders />} />
                   </Routes>
                 </div>
               </div>

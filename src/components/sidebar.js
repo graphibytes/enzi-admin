@@ -26,6 +26,9 @@ const Sidebar = () => {
           <NavLink to="/orders" className="flex items-center p-3 hover:bg-gray-700">
             <ShoppingCartIcon className="w-6 h-6 mr-2" /> Orders
           </NavLink>
+          <NavLink to="/manage-categories" className="flex items-center p-3 hover:bg-gray-700">
+             categories
+          </NavLink>
           <NavLink to="/products" className="flex items-center p-3 hover:bg-gray-700">
             <ChartPieIcon className="w-6 h-6 mr-2" /> Products
           </NavLink>

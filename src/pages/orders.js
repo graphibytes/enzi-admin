@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../services/supabase";
+import { useNavigate } from "react-router-dom";
 
 const Orders = () => {
+  const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -67,7 +69,14 @@ const Orders = () => {
           {filteredOrders.map((order) => (
             <tr key={order.order_id} className="border-t">
               <td className="p-2">{order.order_id}</td>
-              <td className="p-2">{order.user_id}</td>
+              <td className="p-2">
+  <button
+    onClick={() => navigate(`/user-orders/${order.user_id}`)}
+    className="text-blue-500 underline hover:text-blue-700"
+  >
+    {order.user_id}
+  </button>
+</td>
               <td className="p-2">${order.total_amount}</td>
 
               {/* Order Status Dropdown */}
